@@ -1,8 +1,8 @@
-#header img {
+header img {
     max-width: 48px;
     margin-right: 4px;
 }
 
-#header{
+header, footer{
     background-color: #202020;
 }
