@@ -162,10 +162,11 @@ class Produto
     function excluirFoto($caminho_foto = null){
         if(!file_exists($caminho_foto)){
             header('Location: ../index.php');
-            exit;
+            return;
         }
         else{
             unlink($caminho_foto);
+            return;
         }
     }
 }

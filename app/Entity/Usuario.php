@@ -45,4 +45,15 @@ class Usuario{
         
         return true;
     }
+
+    /**
+     * Login do usuário
+     * @param string $email
+     * @param string $senha
+     * @return boolean
+     */
+    public function logar($email, $senha){
+        return (new Database('login'))->select('email = ' . '"' . $email . '"' . ' AND ' . 'senha = ' . '"' .$senha . '"')
+            ->fetchObject(self::class);
+    }
 }

@@ -12,7 +12,7 @@
 <body>
     <div class="container" id="login">
         <h1 class="text-center">Login</h1>
-        <form action="" method="POST" class="d-flex flex-column">
+        <form action="includes/validaLogin.php" method="POST" class="d-flex flex-column">
             <label for="email">Email</label>
             <input type="email" name="email" class="form-control">
             <label for="senha">Senha</label>
