@@ -1,0 +1,11 @@
+@media (min-width: 592px){ /* login */
+    #login{
+        background-color: #202020;
+        padding: 32px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 512px;
+    }
+}

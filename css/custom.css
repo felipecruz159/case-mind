@@ -6,3 +6,28 @@ header img {
 header, footer{
     background-color: #202020;
 }
+
+header .active{
+    color: #DC1E44 !important;
+}
+
+#login{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -70%);
+}
+
+#login .btn{
+    font-weight: bold;
+    background-color: #DC1E44;
+    transition: ease-in-out .2s;
+}
+
+#login .btn:hover{
+    background-color: #8a1930;
+}
+
+#login a{
+    color: #DC1E44;
+    text-decoration: none;
+}
