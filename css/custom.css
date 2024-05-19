@@ -13,7 +13,8 @@ header .active {
 }
 
 #login,
-#cadastro_usuario {
+#cadastro_usuario,
+#exclusao_produto {
     position: absolute;
     top: 50%;
     transform: translate(0, -70%);
@@ -79,4 +80,9 @@ header .active {
 
 #fotos{
     padding: 0;
+}
+
+#deletar a, #deletar input{
+    width: 92px;
+
 }

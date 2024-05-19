@@ -99,6 +99,15 @@ class Produto
     }
 
     /**
+     * Exclui o produto do banco
+     * @return boolean
+     */
+    public function excluir($id)
+    {
+        return (new Database('produtos'))->delete('id_produto = ' . $id);
+    }
+
+    /**
      * Trata as fotos para envio no banco
      * @param array
      * @return string
@@ -148,5 +157,15 @@ class Produto
         $raiz = 'C:\xampp\htdocs\mind\\';
         $relativo = str_replace($raiz, "", $absoluto);
         return $relativo;
+    }
+
+    function excluirFoto($caminho_foto = null){
+        if(!file_exists($caminho_foto)){
+            header('Location: ../index.php');
+            exit;
+        }
+        else{
+            unlink($caminho_foto);
+        }
     }
 }

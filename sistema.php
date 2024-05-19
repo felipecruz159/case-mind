@@ -23,7 +23,7 @@ foreach($produtos as $produto){
                     <div class="d-flex gap-1 justify-content-center">
                         <a href="balanço.php?id='.$produto->id_produto.'"><span class="btn btn-primary material-symbols-outlined" title="balanço">swap_vert</span></a>
                         <a href="edicao_produto.php?id='.$produto->id_produto.'"><span class="btn btn-primary material-symbols-outlined" title="editar">edit_square</span></a>
-                        <a href="excluir.php?id='.$produto->id_produto.'" title="excluir"><span class="btn btn-danger material-symbols-outlined">delete</span></a>
+                        <a href="confirmar_exclusao.php?id='.$produto->id_produto.'" title="excluir"><span class="btn btn-danger material-symbols-outlined">delete</span></a>
                     </div>
                 </td>';
 }

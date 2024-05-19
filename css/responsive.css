@@ -3,7 +3,8 @@
     #login,
     #cadastro_produtos,
     #cadastro_usuario,
-    #edicao_produto {
+    #edicao_produto,
+    #exclusao_produto {
         background-color: #202020;
         padding: 32px;
         position: absolute;

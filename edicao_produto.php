@@ -19,7 +19,7 @@ if (!$objProduto instanceof Produto) {
 
 <div class="container mt-5" id="edicao_produto">
     <h1 class="text-center">Editar produto</h1>
-    <form action="includes/editar_produto.php?id='<?= $_GET['id']?>'" method="POST" enctype="multipart/form-data" class="d-flex flex-column">
+    <form action="includes/editar_produto.php?id=<?= $_GET['id']?>" method="POST" enctype="multipart/form-data" class="d-flex flex-column">
         <label for="nome">Nome</label>
         <input type="text" name="nome" class="form-control" value="<?= $objProduto->nome ?>">
         <label for="valor">Valor</label>
