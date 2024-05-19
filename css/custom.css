@@ -12,19 +12,19 @@ header .active {
     color: #DC1E44 !important;
 }
 
-#login {
+#login, #cadastro_produtosz {
     position: absolute;
     top: 50%;
     transform: translate(0, -70%);
 }
 
-#login .btn, #listagem button {
+#login .btn, #listagem button, #cadastro_produtos .btn {
     font-weight: bold;
     background-color: #DC1E44;
     transition: ease-in-out .2s;
 }
 
-#login .btn:hover, #listagem button:hover {
+#login .btn:hover, #listagem button:hover, #cadastro_produtos .btn:hover {
     background-color: #8a1930;
 }
 
@@ -60,4 +60,10 @@ header .active {
 #listagem td a {
     color: white;
     border-radius: 8px;
+}
+
+#listagem td img{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
 }

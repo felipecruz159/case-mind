@@ -1,5 +1,5 @@
 @media (min-width: 592px){ /* login */
-    #login{
+    #login, #cadastro_produtos{
         background-color: #202020;
         padding: 32px;
         position: absolute;
@@ -7,5 +7,9 @@
         left: 50%;
         transform: translate(-50%, -50%);
         max-width: 512px;
+    }
+
+    #cadastro_produtos{
+        background-color: transparent;
     }
 }
