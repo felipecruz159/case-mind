@@ -3,31 +3,61 @@ header img {
     margin-right: 4px;
 }
 
-header, footer{
+header,
+footer {
     background-color: #202020;
 }
 
-header .active{
+header .active {
     color: #DC1E44 !important;
 }
 
-#login{
+#login {
     position: absolute;
     top: 50%;
     transform: translate(0, -70%);
 }
 
-#login .btn{
+#login .btn, #listagem button {
     font-weight: bold;
     background-color: #DC1E44;
     transition: ease-in-out .2s;
 }
 
-#login .btn:hover{
+#login .btn:hover, #listagem button:hover {
     background-color: #8a1930;
 }
 
-#login a{
+#login a {
     color: #DC1E44;
     text-decoration: none;
+}
+
+#listagem table {
+    border-color: black !important;
+}
+
+.table>:not(caption)>*>* {
+    background-color: #dc1e441c;
+    padding: 4px;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-bg-type: #202020;
+}
+
+#listagem span {
+    padding: 0;
+}
+
+#listagem .descricao {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#listagem td a {
+    color: white;
+    border-radius: 8px;
 }

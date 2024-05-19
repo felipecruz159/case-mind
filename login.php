@@ -18,7 +18,7 @@
             <label for="senha">Senha</label>
             <input type="password" name="senha" class="form-control">
             <a href="cadastro.php" class="mt-3 text-end">Cadastre-se agora</a>
-            <button class="btn text-light mt-3">Entrar</button>
+            <input type="submit" class="btn text-light mt-3" name="submit" value="Enviar">
         </form>
     </div>
 
