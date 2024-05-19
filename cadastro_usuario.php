@@ -13,8 +13,10 @@
     <div class="container" id="cadastro_usuario">
         <h1 class="text-center">Cadastro</h1>
         <form action="" method="POST" class="d-flex flex-column">
-            <label for="usuario">Usuário</label>
-            <input type="text" name="usuario" class="form-control">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" class="form-control">
+            <label for="email">Email</label>
+            <input type="text" name="email" class="form-control">
             <label for="senha">Senha</label>
             <input type="password" name="senha" class="form-control">
             <label for="senha2">Confirme a senha</label>
