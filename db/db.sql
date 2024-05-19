@@ -11,19 +11,16 @@ CREATE TABLE login(
 CREATE TABLE produtos(
     id_produto INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(60) NOT NULL,
+    quantidade INT NOT NULL,
     valor DECIMAL(10,2) NOT NULL,
     descricao VARCHAR(255) NOT NULL,
+    foto VARCHAR(255) NULL
 );
-
-CREATE TABLE estoque(
-    id_estoque INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    id_produto INT NOT NULL,
-    quantidade INT NOT NULL
-)
 
 CREATE TABLE historico(
     id_transacao INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_produto INT NOT NULL,
     tipo VARCHAR(7) NOT NULL,
-    quantidade INT NOT NULL
-)
+    quantidade INT NOT NULL,
+    FOREIGN KEY (id_produto) REFERENCES produtos(id_produto)
+);

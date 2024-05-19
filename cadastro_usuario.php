@@ -12,7 +12,7 @@
 <body>
     <div class="container" id="cadastro_usuario">
         <h1 class="text-center">Cadastro</h1>
-        <form action="" method="POST" class="d-flex flex-column">
+        <form action="includes/cadastrar_usuario.php" method="POST" class="d-flex flex-column">
             <label for="nome">Nome</label>
             <input type="text" name="nome" class="form-control">
             <label for="email">Email</label>

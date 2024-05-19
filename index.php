@@ -2,7 +2,7 @@
 require __DIR__.'/vendor/autoload.php';
 
 session_start();
-if(isset($_SESSION['usuario']) && isset($_SESSION['senha'])){
+if(isset($_SESSION['usuario'], $_SESSION['senha'])){
     include_once __DIR__.'/includes/header.php';
     include_once __DIR__.'/sistema.php';
     include_once __DIR__.'/includes/footer.php';
