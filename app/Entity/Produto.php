@@ -58,10 +58,44 @@ class Produto
         return true;
     }
 
+    /**
+     * Listagem de produtos
+     * @param string where
+     * @param string $order
+     * @param string $limit
+     * @return array
+     */
     public static function getProdutos($where = null, $order = null, $limit = null)
     {
         return (new Database('produtos'))->select($where, $order, $limit)
             ->fetchAll(PDO::FETCH_CLASS, self::class);
+    }
+
+    /**
+     * Buscar produto por id
+     * @param integer $id
+     * @return Produto
+     */
+    public static function getProduto($id)
+    {
+        return (new Database('produtos'))->select('id_produto = ' . $id)
+            ->fetchObject(self::class);
+    }
+
+    /**
+     * Atualizar a vaga no banco
+     * @param integer $id
+     * @return boolean
+     */
+    public function atualizar($id)
+    {
+        return (new Database('produtos'))->update('id_produto = ' . $id, [
+            'nome' => $this->nome,
+            'valor' => $this->valor,
+            'quantidade' => $this->quantidade,
+            'descricao' => $this->descricao,
+            'foto' => $this->foto
+        ]);
     }
 
     /**
@@ -78,7 +112,7 @@ class Produto
         $typesPermitidos = ["image/png", "image/jpg", "image/jpeg"];
         if (!in_array($tipo, $typesPermitidos)) {
             echo '<p style="color: red;">Tipo de arquivo não permitido!</p>';
-            echo '<meta http-equiv = "refresh" content = "1; url = ../cadastro_produtos.php" />'; 
+            echo '<meta http-equiv = "refresh" content = "1; url = ../cadastro_produtos.php" />';
             exit;
         }
 
@@ -87,16 +121,32 @@ class Produto
         $novoNome = $produto . '-' . $hoje;
 
         $caminho = $pasta . $novoNome . '.' . $extensao;
-            
-        if(move_uploaded_file($tmp, $caminho)){
-            echo '<p style="color: green;">Produto cadastrado com sucesso!</p>';
-        }
-        else{
+
+        if (move_uploaded_file($tmp, $caminho)) {
+        } else {
             echo '<p style="color: red;">Erro ao cadastrar o produto!</p>';
-            echo '<meta http-equiv = "refresh" content = "1; url = ../cadastro_produtos.php" />'; 
+            echo '<meta http-equiv = "refresh" content = "1; url = ../cadastro_produtos.php" />';
             exit;
         }
         return $caminho;
+    }
 
+    /**
+     * Usada para cortar o caminho absoluto da foto do banco para mostrar a miniatura
+     * @param string caminho absoluto
+     * @return string caminho relativo
+     */
+    function mostraFoto($absoluto)
+    {
+        $raiz = 'C:\xampp\htdocs\mind\\';
+        $relativo = str_replace($raiz, "", $absoluto);
+        return $relativo;
+    }
+
+    function validaFotoLink($absoluto)
+    {
+        $raiz = 'C:\xampp\htdocs\mind\\';
+        $relativo = str_replace($raiz, "", $absoluto);
+        return $relativo;
     }
 }

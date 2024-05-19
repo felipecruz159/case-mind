@@ -105,7 +105,7 @@ class Database
      * Realizar consulta no banco
      * @param string $where
      * @param string $order
-     * @param string $limit
+     * @param string $limit 
      * @return PDOStatement
      */
     public function select($where = null, $order = null, $limit = null, $fields = "*")
@@ -118,5 +118,24 @@ class Database
         $query = "SELECT " . $fields . " FROM " . $this->table . " " . $where . " " . $order . " " . $limit;
 
         return $this->execute($query);
+    }
+
+    /**
+     * Atualizar o banco de dados
+     * @param string $where
+     * @param array $values
+     * @return boolean
+     */
+    public function update($where, $values)
+    {
+        $fields = array_keys($values);
+
+        $query = 'UPDATE ' . $this->table . ' SET ' . implode('=?,', $fields) . '=? WHERE ' . $where;
+        
+        echo $query;
+
+        $this->execute($query, array_values($values));
+
+        return true;
     }
 }

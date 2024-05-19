@@ -22,7 +22,8 @@ header .active {
 #login .btn,
 #listagem button,
 #cadastro_produtos .btn,
-#cadastro_usuario .btn {
+#cadastro_usuario .btn,
+#edicao_produto .btn {
     font-weight: bold;
     background-color: #DC1E44;
     transition: ease-in-out .2s;
@@ -31,11 +32,12 @@ header .active {
 #login .btn:hover,
 #listagem button:hover,
 #cadastro_produtos .btn:hover,
-#cadastro_usuario .btn:hover {
+#cadastro_usuario .btn:hover,
+#edicao_produto .btn:hover {
     background-color: #8a1930;
 }
 
-#login a {
+#login a, #fotos a {
     color: #DC1E44;
     text-decoration: none;
 }
@@ -73,4 +75,8 @@ header .active {
     width: 32px;
     height: 32px;
     object-fit: cover;
+}
+
+#fotos{
+    padding: 0;
 }

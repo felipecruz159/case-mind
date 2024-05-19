@@ -1,5 +1,9 @@
-@media (min-width: 576px){ /* login */
-    #login, #cadastro_produtos, #cadastro_usuario{
+@media (min-width: 576px) {
+
+    #login,
+    #cadastro_produtos,
+    #cadastro_usuario,
+    #edicao_produto {
         background-color: #202020;
         padding: 32px;
         position: absolute;
@@ -9,7 +13,7 @@
         max-width: 512px;
     }
 
-    #cadastro_produtos{
+    #cadastro_produtos, #edicao_produto {
         background-color: transparent;
     }
 }

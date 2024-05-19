@@ -9,18 +9,9 @@ $produtos = Produto::getProdutos();
 
 $result = '';
 
-/**
- * Usada para cortar o caminho absoluto da foto do banco para mostrar a miniatura
- * @param string caminho absoluto
- * @return string caminho relativo
- */
-function mostraFoto($absoluto){ 
-    $raiz = 'C:\xampp\htdocs\mind\\';
-    $relativo = str_replace($raiz, "", $absoluto);
-    return $relativo;
-}
+
 foreach($produtos as $produto){
-    $produto->foto = mostraFoto($produto->foto);
+    $produto->foto = $produto->mostraFoto($produto->foto);
     $result .= '<tr>
                     <td>'.$produto->id_produto.'</td>
                     <td>'.$produto->nome.'</td>
