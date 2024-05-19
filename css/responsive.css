@@ -1,5 +1,5 @@
-@media (min-width: 592px){ /* login */
-    #login, #cadastro_produtos{
+@media (min-width: 576px){ /* login */
+    #login, #cadastro_produtos, #cadastro_usuario{
         background-color: #202020;
         padding: 32px;
         position: absolute;

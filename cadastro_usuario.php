@@ -10,15 +10,16 @@
 </head>
 
 <body>
-    <div class="container" id="login">
-        <h1 class="text-center">Login</h1>
+    <div class="container" id="cadastro_usuario">
+        <h1 class="text-center">Cadastro</h1>
         <form action="" method="POST" class="d-flex flex-column">
             <label for="usuario">Usuário</label>
             <input type="text" name="usuario" class="form-control">
             <label for="senha">Senha</label>
             <input type="password" name="senha" class="form-control">
-            <a href="cadastro_usuario.php" class="mt-3 text-end">Cadastre-se agora</a>
-            <input type="submit" class="btn text-light mt-3" name="submit" value="Entrar">
+            <label for="senha2">Confirme a senha</label>
+            <input type="password" name="senha2" class="form-control">
+            <input type="submit" class="btn text-light mt-3" name="submit" value="Cadastrar">
         </form>
     </div>
 
