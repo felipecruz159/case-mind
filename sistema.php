@@ -1,7 +1,6 @@
 <?php
 require __DIR__.'/vendor/autoload.php';
 
-use \App\Entity\Usuario;
 use \App\Entity\Produto;
 
 // $usuario = new Usuario::getNome();

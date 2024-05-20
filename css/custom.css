@@ -47,8 +47,13 @@ header .active {
     border-color: black !important;
 }
 
-.table>:not(caption)>*>* {
+#listagem .table>:not(caption)>*>* {
     background-color: #dc1e441c;
+    padding: 4px;
+}
+
+#historico .table>:not(caption)>*>* {
+    background-color: #202020;
     padding: 4px;
 }
 
