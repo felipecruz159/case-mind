@@ -91,3 +91,11 @@ header .active {
     width: 92px;
 
 }
+
+#movimentacoes .saida{
+    color: #DC1E44;
+}
+
+#historico .entrada{
+    color: green;
+}

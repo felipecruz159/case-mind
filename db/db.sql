@@ -21,6 +21,5 @@ CREATE TABLE historico(
     id_transacao INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_produto INT NOT NULL,
     tipo VARCHAR(7) NOT NULL,
-    quantidade INT NOT NULL,
-    FOREIGN KEY (id_produto) REFERENCES produtos(id_produto)
+    movimento INT NOT NULL
 );

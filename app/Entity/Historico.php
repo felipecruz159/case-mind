@@ -38,8 +38,28 @@ class Historico
             ->fetchAll(PDO::FETCH_CLASS, self::class);
     }
 
-    public function getNomeProduto($id_produto){
-        return (new Database('historico'))->select('email = ' . $id_produto)
-            ->fetchObject(self::class);
+    /**
+     * Lança estoque em produtos e histórico de movimentações
+     */
+    public function lancarEstoque(){
+        $dbHistorico = new Database('historico');
+        $dbProdutos = new Database('produtos');
+
+        $produto = Produto::getProduto($this->id_produto);
+        // echo 'idproduto:'.$this->id_produto;
+        // echo 'tipo:'.$this->tipo;
+        // echo $produto->quantidade;
+        if($this->tipo === 'entrada'){
+            $produto->quantidade += $this->movimento;
+        } else{
+            $produto->quantidade -= $this->movimento;
+        }
+        $produto->atualizar($this->id_produto);
+
+        $dbHistorico->insert([
+            'id_produto' => $this->id_produto,
+            'tipo' => $this->tipo,
+            'movimento' => $this->movimento
+        ]);
     }
 }
